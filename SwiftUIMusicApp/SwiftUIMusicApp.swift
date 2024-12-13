@@ -8,10 +8,12 @@
 import SwiftUI
 
 @main
-struct SwiftUIMusicAppApp: App {
+struct SwiftUIMusicApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+			NavigationView {
+				MainTabView()
+			}
         }
     }
 }
