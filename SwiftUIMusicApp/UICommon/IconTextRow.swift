@@ -8,11 +8,28 @@
 import SwiftUI
 
 struct IconTextRow: View {
+	var title: String
+	var icon: String
+	
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		HStack {
+			Image(icon)
+				.resizable()
+				.scaledToFit()
+				.frame(width: 25, height: 25)
+			
+			Text(title)
+				.font(.customfont(.medium, fontSize: 12))
+				.foregroundColor(.primaryText.opacity(0.9))
+				.frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+		}
+		.frame(height: 40)
+		
+		Divider()
+			.padding(.leading, 40)
     }
 }
 
 #Preview {
-    IconTextRow()
+	IconTextRow(title: "Title", icon: "m_theme")
 }

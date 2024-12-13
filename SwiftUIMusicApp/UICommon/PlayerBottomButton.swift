@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct PlayerBottomButton: View {
+	var title: String
+	var icon: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		VStack {
+			Image(icon)
+				.resizable()
+				.scaledToFit()
+				.frame(width: 30, height: 30)
+				.foregroundColor(.primaryText)
+			
+			Text(title)
+				.font(.customfont(.regular, fontSize: 14))
+				.foregroundColor(.secondaryText)
+		}
     }
 }
 
 #Preview {
-    PlayerBottomButton()
+	PlayerBottomButton(title: "Playlist", icon: "playlist")
+		.background(Color.bg)
 }

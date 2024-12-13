@@ -6,13 +6,32 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F02EB35B2D0A8579002ABE60 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = F02EB35A2D0A8579002ABE60 /* SDWebImageSwiftUI */; };
+		F02EB35F2D0A8E14002ABE60 /* RxMusicPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = F02EB35E2D0A8E14002ABE60 /* RxMusicPlayer */; };
+		F0F72A782D09822D0056522A /* CircularSlider in Frameworks */ = {isa = PBXBuildFile; productRef = F0F72A772D09822D0056522A /* CircularSlider */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		F02854962CF83DF70018A6A5 /* SwiftUIMusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIMusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F02854B12CF83F360018A6A5 /* Exceptions for "SwiftUIMusicApp" folder in "SwiftUIMusicApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F02854952CF83DF70018A6A5 /* SwiftUIMusicApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F02854982CF83DF70018A6A5 /* SwiftUIMusicApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F02854B12CF83F360018A6A5 /* Exceptions for "SwiftUIMusicApp" folder in "SwiftUIMusicApp" target */,
+			);
 			path = SwiftUIMusicApp;
 			sourceTree = "<group>";
 		};
@@ -23,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F02EB35F2D0A8E14002ABE60 /* RxMusicPlayer in Frameworks */,
+				F02EB35B2D0A8579002ABE60 /* SDWebImageSwiftUI in Frameworks */,
+				F0F72A782D09822D0056522A /* CircularSlider in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +87,9 @@
 			);
 			name = SwiftUIMusicApp;
 			packageProductDependencies = (
+				F0F72A772D09822D0056522A /* CircularSlider */,
+				F02EB35A2D0A8579002ABE60 /* SDWebImageSwiftUI */,
+				F02EB35E2D0A8E14002ABE60 /* RxMusicPlayer */,
 			);
 			productName = SwiftUIMusicApp;
 			productReference = F02854962CF83DF70018A6A5 /* SwiftUIMusicApp.app */;
@@ -94,6 +119,11 @@
 			);
 			mainGroup = F028548D2CF83DF70018A6A5;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F0F72A762D09822D0056522A /* XCRemoteSwiftPackageReference "CircularSlider" */,
+				F02EB3592D0A8579002ABE60 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				F02EB35D2D0A8E14002ABE60 /* XCRemoteSwiftPackageReference "RxMusicPlayer" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F02854972CF83DF70018A6A5 /* Products */;
 			projectDirPath = "";
@@ -249,16 +279,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIMusicApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIMusicApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -266,9 +299,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Andychao217.SwiftUIMusicApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -277,16 +314,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIMusicApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SwiftUIMusicApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,9 +334,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Andychao217.SwiftUIMusicApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -322,6 +366,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F02EB3592D0A8579002ABE60 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.3;
+			};
+		};
+		F02EB35D2D0A8E14002ABE60 /* XCRemoteSwiftPackageReference "RxMusicPlayer" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yoheimuta/RxMusicPlayer";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.3;
+			};
+		};
+		F0F72A762D09822D0056522A /* XCRemoteSwiftPackageReference "CircularSlider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://www.github.com/terlan98/CircularSlider";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F02EB35A2D0A8579002ABE60 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F02EB3592D0A8579002ABE60 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		F02EB35E2D0A8E14002ABE60 /* RxMusicPlayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F02EB35D2D0A8E14002ABE60 /* XCRemoteSwiftPackageReference "RxMusicPlayer" */;
+			productName = RxMusicPlayer;
+		};
+		F0F72A772D09822D0056522A /* CircularSlider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F0F72A762D09822D0056522A /* XCRemoteSwiftPackageReference "CircularSlider" */;
+			productName = CircularSlider;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F028548E2CF83DF70018A6A5 /* Project object */;
 }

@@ -14,6 +14,7 @@ struct SwiftUIMusicApp: App {
 			NavigationView {
 				MainTabView()
 			}
+			.navigationViewStyle(.stack)
         }
     }
 }
